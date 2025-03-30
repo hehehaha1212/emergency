@@ -11,9 +11,9 @@ import (
 
 func main()
 {
- err:= godotenv.load.(".env")
+ err:= godotenv.load.(".env")   //load the env vriable file into err to check if its loading
  if err != nil {
-   log.fatel("error loading env")
+   log.fatel("error loading env")  //fatel closes the process
 }
 
 config.ConnectDB()
