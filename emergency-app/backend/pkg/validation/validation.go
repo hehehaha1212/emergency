@@ -4,7 +4,7 @@ import (
 	"errors"
 	"strings"
 	
-	"emergency-app/internal/models"
+	"emergency-app/backend/internal/models"
 )
 
 

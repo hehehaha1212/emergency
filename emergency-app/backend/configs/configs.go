@@ -8,7 +8,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	
-	"emergency-app/internal/models"
+	"emergency-app/backend/internal/models"
 )
 
 var DB *gorm.DB

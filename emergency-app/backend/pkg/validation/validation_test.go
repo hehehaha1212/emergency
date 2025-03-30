@@ -4,7 +4,7 @@ import (
 	"testing"
 	
 	"github.com/stretchr/testify/assert"
-	"emergency-app/internal/models"
+	"emergency-app/backend/internal/models"
 )
 
 func TestValidateRequest(t *testing.T) {

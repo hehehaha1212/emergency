@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"emergency-app/internal/models"
-	"emergency-app/pkg/utils"
-	"emergency-app/pkg/validation"
+	"emergency-app/backend/internal/models"
+	"emergency-app/backend/pkg/utils"
+	"emergency-app/backend/pkg/validation"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

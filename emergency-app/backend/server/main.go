@@ -6,8 +6,8 @@ import (
 	
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	"emergency-app/configs"
-	"emergency-app/internal/routes"
+	"emergency-app/backend/configs"
+	"emergency-app/backend/internal/routes"
 )
 
 func main() {

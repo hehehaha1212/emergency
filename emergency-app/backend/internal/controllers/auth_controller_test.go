@@ -10,7 +10,7 @@ import (
 	
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"
-	"emergency-app/internal/models"
+	"emergency-app/backend/internal/models"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )

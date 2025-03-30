@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"emergency-app/internal/models"
-	"emergency-app/internal/services"
-	"emergency-app/pkg/validation"
+	"emergency-app/backend/internal/models"
+	"emergency-app/backend/internal/services"
+	"emergency-app/backend/pkg/validation"
 )
 
 func CreateRequest(c *gin.Context) {

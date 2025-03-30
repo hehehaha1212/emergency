@@ -1,12 +1,12 @@
-package services
+package routes
 
 import(
 	"github.com/gin-gonic/gin"
-    "emergency-app/internal/models"
+    "emergency-app/backend/internal/models"
 	"gorm.io/gorm"
 )
 
-func CreateRequest(request *model.request) error{
+func CreateRequest(request *model.Request) error{
 
-	return models.DB.create(request).error
+	return models.DB.Create(request).error
 }

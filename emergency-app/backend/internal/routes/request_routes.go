@@ -2,8 +2,8 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"emergency-app/internal/controllers"
-	"emergency-app/internal/middleware"
+	"emergency-app/backend/internal/controllers"
+	"emergency-app/backend/internal/middleware"
 )
 
 func SetupRoutes(router *gin.Engine) {
