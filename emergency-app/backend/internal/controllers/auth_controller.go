@@ -18,13 +18,12 @@ func Register(c *gin.Context) {
 		return
 	}
 
-	// Validate user input
+	
 	if err := validation.ValidateUser(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
-	// Check if email already exists
 	var existingUser models.User
 	if err := models.DB.Where("email = ?", user.Email).First(&existingUser).Error; err == nil {
 		c.JSON(http.StatusConflict, gin.H{"error": "Email already in use"})
@@ -34,15 +33,13 @@ func Register(c *gin.Context) {
 		return
 	}
 
-	// Hash password
+	
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Error hashing password"})
 		return
 	}
 	user.Password = string(hashedPassword)
-	
-	// Create user
 	if err := models.DB.Create(&user).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user: " + err.Error()})
 		return
@@ -76,8 +73,6 @@ func Login(c *gin.Context) {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 		return
 	}
-	
-	// Generate JWT token
 	token, err := utils.GenerateToken(user.ID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to generate token: " + err.Error()})
